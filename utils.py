@@ -1,6 +1,6 @@
 import os
 import uuid
-
+import datetime
 import boto3
 
 TABLE = os.environ['TABLE_NAME']
@@ -47,7 +47,10 @@ def make_batch_items(count):
                 'Item': {
                     'Id': {
                         'S': str(uuid.uuid4())
-                    } 
+                    } ,
+                    'CreatedAt': {
+                        'S': datetime.datetime.now().replace(microsecond=0).isoformat()
+                    }
                 }
             }
         })

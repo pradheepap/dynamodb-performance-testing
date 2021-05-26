@@ -1,4 +1,5 @@
-FUNCTIONS=("putItem" "batchWriteItem5" "batchWriteItem25" "transactWriteItem5" "transactWriteItem25" "transactWriteItem5Fail")
+#FUNCTIONS=("putItem" "batchWriteItem5" "batchWriteItem25" "transactWriteItem5" "transactWriteItem25" "transactWriteItem5Fail")
+FUNCTIONS=("batchWriteItem25")
 
 for function in "${FUNCTIONS[@]}"
 do
